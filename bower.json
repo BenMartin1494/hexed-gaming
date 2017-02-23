@@ -1,0 +1,21 @@
+{
+  "name": "hexed-gaming",
+  "version": "0.1.0",
+  "authors": [
+    "Ben Martin <roger1494csumbj@gmail.com>"
+  ],
+  "description": "Website for Hexed gaming.",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
