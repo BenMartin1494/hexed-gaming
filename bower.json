@@ -5,7 +5,6 @@
     "Ben Martin <roger1494csumbj@gmail.com>"
   ],
   "description": "Website for Hexed gaming.",
-  "main": "index.html",
   "license": "MIT",
   "dependencies": {
     "foundation-sites": "~6.3.0",
