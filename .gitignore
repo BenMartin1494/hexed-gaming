@@ -1,5 +1,4 @@
 __pycache__/
 bower_components/
 node_modules/
-hexed_gaming/static/css/
 *.pyc
