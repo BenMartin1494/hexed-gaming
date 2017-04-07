@@ -3,9 +3,104 @@
     <head>
         <meta charset="utf-8">
         <title>Hexed Gaming</title>
-        <link rel="stylesheet" href="{{ url_for("static", filename="css/app.css") }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/swiper/dist/css/swiper.min.css') }}">
+        <script src="https://use.fontawesome.com/6e29dbe355.js"></script>
+        <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bower_components/swiper/dist/js/swiper.jquery.min.js') }}"></script>
     </head>
     <body>
-        <p>Please work!</p>
+        <div class="top-bar">
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a style="color: #B92B27;" href="#">Home</a></li>
+                    <li style="color: #B92B27;">|</li>
+                    <li><a href="#">News</a></li>
+                    <li style="color: #B92B27;">|</li>
+                    <li><a href="#">Teams</a></li>
+                    <li style="color: #B92B27;">|</li>
+                    <li><a href="#">Events</a></li>
+                    <li style="color: #B92B27;">|</li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="swiper-container" style="width: 100%; height: 60%; padding-top: 1em; padding-bottom: 1em; background: linear-gradient(to bottom, #f5f5f5 0%,#424242 100%);">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="box-shadow: 0px 5px 5px 0px rgba(0,0,0,1); background-image: url('static/img/league.jpg'); background-size: cover; background-position: center; width: 50%">Slide 1</div>
+                <div class="swiper-slide" style="box-shadow: 0px 5px 5px 0px rgba(0,0,0,1); background-image: url('static/img/counterstrike.jpg'); background-size: cover; background-position: center; width: 50%">Slide 2</div>
+                <div class="swiper-slide" style="box-shadow: 0px 5px 5px 0px rgba(0,0,0,1); background-image: url('static/img/ffxiv.jpg'); background-size: cover; background-position: center; width: 50%">Slide 3</div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div style="background-color: #424242; height: 30%;">
+            <div style="display: table; width: 100%; height: 100%;">
+                <div style="display: table-cell; vertical-align: middle;">
+                    <div class="main-content row algin-top small-unstack">
+                        <div class="feature-block columns">
+                            <i class="feature-block__icon fa fa-newspaper-o fa-3x"></i>
+                            <h4 class="feature-block__title" style="color: #B92B27;">Latest News</h4>
+                            <p class="feature-block__description">Keep up-to-date with the latest news from Hexed Gaming</p>
+                            <a href="#" class="button" style="margin-left: auto; margin-right: auto; display: block; width: 50%; background-color: #B92B27; box-shadow: 0px 3px 5px #000000; margin: 1rem auto 1rem auto; padding: 0.5em .25em;">Find out more...</a>
+                        </div>
+                        <div class="feature-block columns">
+                            <i class="feature-block__icon fa fa-users fa-3x"></i>
+                            <h4 class="feature-block__title" style="color: #B92B27;">Competitive Teams</h4>
+                            <p class="feature-block__description">Checkout the current teams that are representing the Hexed Gaming community</p>
+                            <a href="#" class="button" style="margin-left: auto; margin-right: auto; display: block; width: 50%; background-color: #B92B27; box-shadow: 0px 3px 5px #000000; margin: 1rem auto 1rem auto; padding: 0.5em .25em;">Find out more...</a>
+                        </div>
+                        <div class="feature-block columns">
+                            <i class="feature-block__icon fa fa-calendar fa-3x"></i>
+                            <h4 class="feature-block__title" style="color: #B92B27;">Upcoming Events</h4>
+                            <p class="feature-block__description">Take a look at the events taking place in the near future</p>
+                            <a href="#" class="button" style="margin-left: auto; margin-right: auto; display: block; width: 50%; background-color: #B92B27; box-shadow: 0px 3px 5px #000000; margin: 1rem auto 1rem auto; padding: 0.5em .25em;">Find out more...</a>
+                        </div>
+                        <div class="feature-block columns">
+                            <i class="feature-block__icon fa fa-info-circle fa-3x"></i>
+                            <h4 class="feature-block__title" style="color: #B92B27;">About Us</h4>
+                            <p class="feature-block__description">Find out more about the community and its members</p>
+                            <a href="#" class="button" style="margin-left: auto; margin-right: auto; display: block; width: 50%; background-color: #B92B27; box-shadow: 0px 3px 5px #000000; margin: 1rem auto 1rem auto; padding: 0.5em .25em;">Find out more...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer" style="position: absolute; bottom: 0; color: #f5f5f5;">
+                <div class="footer__left-content">
+                    Email: hexed-gaming@outlook.com - Designer: roger1494csumbj@gmail.com
+                </div>
+                <div class="footer__right-content">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-youtube-square"></i>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var mySwiper = new Swiper ('.swiper-container', {
+                    speed: 500,
+                    loop: true,
+                    autoplay: 5000,
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: -100,
+                    coverflow: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true
+                    }
+                })
+            });
+        </script>
     </body>
 </html>

@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 
 var sassPaths = [
-  'bower_components/normalize.scss/sass',
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+  'hexed_gaming/static/bower_components/normalize.scss/sass',
+  'hexed_gaming/static/bower_components/foundation-sites/scss',
+  'hexed_gaming/static/bower_components/motion-ui/src'
 ];
 
 gulp.task('sass', function() {

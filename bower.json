@@ -6,9 +6,11 @@
   ],
   "description": "Website for Hexed gaming.",
   "license": "MIT",
+  "directory": "hexed-gaming/static/",
   "dependencies": {
     "foundation-sites": "~6.3.0",
-    "motion-ui": "~1.2.2"
+    "motion-ui": "~1.2.2",
+    "swiper": "~3.4.1"
   },
   "ignore": [
     "**/.*",
